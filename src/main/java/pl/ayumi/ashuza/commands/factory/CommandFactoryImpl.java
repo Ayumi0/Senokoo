@@ -37,7 +37,7 @@ public class CommandFactoryImpl implements CommandFactory {
 
             final List<String> arguments = new ArrayList<>(Arrays.asList(args));
             arguments.remove(0);
-            cmd.onExecute(ArgumentParser.parse(message));
+            cmd.onExecute(message, ArgumentParser.parse(message));
 
 
 

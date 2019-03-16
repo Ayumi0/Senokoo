@@ -1,5 +1,6 @@
 package pl.ayumi.ashuza.commands;
 
+import com.mewna.catnip.entity.message.Message;
 import pl.ayumi.ashuza.commands.argument.Argument;
 
 import java.util.List;
@@ -35,5 +36,5 @@ public abstract class CommandImpl implements Command{
     }
 
 
-    public abstract void onExecute(List<Argument> args);
+    public abstract void onExecute(Message message, List<Argument> args);
 }
