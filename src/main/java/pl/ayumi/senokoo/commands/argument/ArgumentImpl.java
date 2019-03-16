@@ -1,4 +1,4 @@
-package pl.ayumi.ashuza.commands.argument;
+package pl.ayumi.senokoo.commands.argument;
 
 public class ArgumentImpl implements Argument {
     private Class type;

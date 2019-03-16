@@ -1,9 +1,10 @@
-package pl.ayumi.ashuza.commands.factory;
+package pl.ayumi.senokoo.commands.factory;
 
 import com.mewna.catnip.Catnip;
 import com.mewna.catnip.shard.DiscordEvent;
-import pl.ayumi.ashuza.commands.CommandImpl;
-import pl.ayumi.ashuza.commands.argument.ArgumentParser;
+import pl.ayumi.senokoo.commands.Command;
+import pl.ayumi.senokoo.commands.CommandImpl;
+import pl.ayumi.senokoo.commands.argument.ArgumentParser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,9 +14,9 @@ import java.util.Optional;
 public class CommandFactoryImpl implements CommandFactory {
     private final Catnip catnip;
     private final String prefix;
-    private final ArrayList<CommandImpl> commands;
+    private final List<CommandImpl> commands;
 
-    public CommandFactoryImpl(final Catnip catnip, final String prefix, final ArrayList<CommandImpl> commands) {
+    public CommandFactoryImpl(final Catnip catnip, final String prefix) {
         this.catnip = catnip;
         this.prefix = prefix;
         this.commands = new ArrayList<>();
@@ -32,6 +33,7 @@ public class CommandFactoryImpl implements CommandFactory {
                 return;
             }
             final String name = args[0].substring(prefix.length());
+            if(this.getCommand(name) == null){return;}
             final Optional<CommandImpl> command = Optional.of(this.getCommand(name));
             final CommandImpl cmd = command.get();
 
@@ -68,5 +70,10 @@ public class CommandFactoryImpl implements CommandFactory {
             return;
         }
         commands.remove(command);
+    }
+
+    @Override
+    public List<CommandImpl> getCommands() {
+        return commands;
     }
 }

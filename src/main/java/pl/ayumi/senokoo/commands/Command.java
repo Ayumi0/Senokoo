@@ -1,6 +1,6 @@
-package pl.ayumi.ashuza.commands;
+package pl.ayumi.senokoo.commands;
 
-import pl.ayumi.ashuza.commands.argument.Argument;
+import pl.ayumi.senokoo.commands.argument.Argument;
 
 import java.util.List;
 

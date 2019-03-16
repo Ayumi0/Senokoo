@@ -1,12 +1,11 @@
-package pl.ayumi.ashuza.commands;
+package pl.ayumi.senokoo.commands;
 
 import com.mewna.catnip.entity.message.Embed;
 import com.mewna.catnip.entity.message.Message;
-import pl.ayumi.ashuza.commands.argument.Argument;
-import pl.ayumi.ashuza.commands.factory.CommandFactory;
+import pl.ayumi.senokoo.commands.argument.Argument;
+import pl.ayumi.senokoo.commands.factory.CommandFactory;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface CommandExecutor {
 

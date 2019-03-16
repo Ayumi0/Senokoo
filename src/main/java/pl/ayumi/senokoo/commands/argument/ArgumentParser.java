@@ -1,4 +1,4 @@
-package pl.ayumi.ashuza.commands.argument;
+package pl.ayumi.senokoo.commands.argument;
 
 import com.mewna.catnip.entity.message.Message;
 import org.apache.commons.lang3.math.NumberUtils;
