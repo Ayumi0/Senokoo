@@ -1,8 +1,8 @@
 # Senkoo
 Discord bot
 TODO:
-- [ ] Setup Project
-- [ ] Command System
+- [x] Setup Project
+- [x] Command System
 - [ ] Database Manager
 - [ ] User Manager
 - [ ] Balance Manager
